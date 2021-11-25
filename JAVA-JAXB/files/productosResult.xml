@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<store>
+	<products>
+		<product name="Prod 1">
+			<price badge="Pound" />
+			<stock color="orange" storage="12" />
+		</product>
+		<product name="Prod 2">
+			<price badge="Dollar" />
+			<stock color="brown" storage="56" />
+		</product>
+		<product name="Prod 3">
+			<price badge="Euro" />
+			<stock color="yellow" storage="62" />
+		</product>
+		<product name="Prod 4">
+			<price badge="Dollar" />
+			<stock color="green" storage="806" />
+		</product>
+		<product name="Prod 5">
+			<price badge="Euro" />
+			<stock color="dark blue" storage="50" />
+		</product>
+	</products>
+</store>
