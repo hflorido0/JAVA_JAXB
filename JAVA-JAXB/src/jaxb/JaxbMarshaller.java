@@ -14,12 +14,12 @@ import modelo.Stock;
 
 public class JaxbMarshaller {
 	
-	public void init () {
+	public void init (String file) {
 		try {
 			JAXBContext context = JAXBContext.newInstance(Products.class);
 			Marshaller marshaller = context.createMarshaller();
 			Products products = createXml();
-			marshaller.marshal(products, new File("files/productsResult.xml"));
+			marshaller.marshal(products, new File(file));
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
