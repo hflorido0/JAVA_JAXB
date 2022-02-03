@@ -11,21 +11,23 @@ import modelo.Products;
 
 public class JaxbUnMarshaller {
 	
-	public void init (String file) {
-		Products products = null;
+	public Products init (String file) {
+		Products lectura = null;
 		try {
 			JAXBContext context = JAXBContext.newInstance(Products.class);
 			Unmarshaller unmarshaller = context.createUnmarshaller();
-			products = (Products) unmarshaller.unmarshal(new File(file));
+			lectura = (Products) unmarshaller.unmarshal(new File(file));
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
 		
-		if (products == null) System.out.println("ERROR MARSHALLING");
+		if (lectura == null) System.out.println("ERROR MARSHALLING");
 		else {
-			for (Product p : products.getProducts()) {
+			for (Product p : lectura.getProducts()) {
 				System.out.println(p);
 			}
 		}
+		
+		return lectura;
 	}
 }
